@@ -50,6 +50,7 @@ class Square:
 
         for i in range(self.__position[1]):
             print("")
+
         for row in range(self.__size):
             print(" " * self.__position[0], end="")
             for column in range(self.__size):
