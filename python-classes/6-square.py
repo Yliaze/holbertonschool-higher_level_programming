@@ -3,19 +3,20 @@
 
 
 class Square:
-    """Defines a square by size (private instance attribute)"""
+
     def __init__(self, size=0, position=(0, 0)):
+        """Defines a square by size (private instance attribute)"""
         self.__size = size
         self.__position = position
 
-    """Property def size(self): to retrieve it"""
     @property
     def size(self):
+        """Property def size(self): to retrieve it"""
         return self.__size
 
-    """Property setter def size(self, value): to set it"""
     @size.setter
     def size(self, value):
+        """Property setter def size(self, value): to set it"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -23,14 +24,14 @@ class Square:
         else:
             self.__size = value
 
-    """Property def position(self): to retrieve it"""
     @property
     def position(self):
+        """Property def position(self): to retrieve it"""
         return self.__position
 
-    """Property setter def position(self, value): to set it"""
     @position.setter
     def position(self, value):
+        """Property setter def position(self, value): to set it"""
         if type(value) is not tuple or len(value) is not 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif type(value[0]) is not int or type(value[1]) is not int:
@@ -40,12 +41,12 @@ class Square:
         else:
             self.__position = value
 
-    """Returns the current square area"""
     def area(self):
+        """Returns the current square area"""
         return self.__size * self.__size
 
-    """Prints in stdout the square with the character #"""
     def my_print(self):
+        """Prints in stdout the square with the character #"""
         if self.__size == 0:
             print("")
         else:
