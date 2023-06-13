@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Function that adds 2 integers and return the sum
+"""Module that adds 2 integers and return the sum
     Args:
         a (int):  integers or floats
         b (int):  integers or floats
@@ -7,7 +7,7 @@
 
 
 def add_integer(a, b=98):
-    """Module that add two integers or float
+    """Function that add two integers or float
     and return the sum.
     """
     try:
