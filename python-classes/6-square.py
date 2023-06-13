@@ -6,8 +6,8 @@ class Square:
     """A class that defines a square of a given size at a given position"""
     def __init__(self, size=0, position=(0, 0)):
         """Defines a square by size (private instance attribute)"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
