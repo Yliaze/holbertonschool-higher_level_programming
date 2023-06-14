@@ -2,7 +2,6 @@
 """Module that prints a square with the character #
     Args:
         size (int): size length of the square
-
 """
 
 
@@ -14,7 +13,7 @@ def print_square(size):
         raise TypeError("size must be an integer")
     if size < 0:
         raise ValueError("size must be >= 0")
-    if size < 0 and type(size) is float:
+    if type(size) is float and size < 0:
         raise TypeError("size must be an integer")
     for i in range(size):
         print("#" * size)
