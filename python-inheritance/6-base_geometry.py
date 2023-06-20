@@ -1,11 +1,5 @@
 #!/usr/bin/python3
-"""
-class BaseGeometry :
--description-
-
-Args:
-    -NA (type): NA-
-"""
+"""Class BaseGeometry"""
 
 
 class BaseGeometry():
