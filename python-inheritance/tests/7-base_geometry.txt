@@ -18,7 +18,7 @@ Now use it:
 
     >>> bg.integer_validator("my_int", 12)
 
-    >>> bg.integer_validator("width", 89)
+    >>> bg.integer_validator("age", 89)
 
     >>> bg.integer_validator(4, 64)
 
@@ -54,9 +54,21 @@ Now use it:
     Traceback (most recent call last):
     TypeError: age must be an integer
 
-    >>> bg.integer_validator("Wrong", False)
+    >>> bg.integer_validator("age", "4")
     Traceback (most recent call last):
-    TypeError: Wrong must be an integer
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", (4,))
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", [3])
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> bg.integer_validator("age", {3, 4})
+    Traceback (most recent call last):
+    TypeError: age must be an integer
 
     >>> bg.integer_validator("age", None)
     Traceback (most recent call last):
@@ -65,5 +77,3 @@ Now use it:
     >>> bg.integer_validator("age", float("inf"))
     Traceback (most recent call last):
     TypeError: age must be an integer
-
-
