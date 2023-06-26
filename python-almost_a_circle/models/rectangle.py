@@ -17,17 +17,17 @@ class Rectangle(Base):
             y (int): The y coordinate of the new Rectangle
         """
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
-    def widht(self):
+    def width(self):
         """Getter for width"""
         return self.__width
 
-    @widht.setter
+    @width.setter
     def widht(self, value):
         """Setter for width"""
         self.__width = value
@@ -47,7 +47,7 @@ class Rectangle(Base):
         """Getter for x"""
         return self.__x
 
-    @widht.setter
+    @x.setter
     def x(self, value):
         """Setter for x"""
         self.__x = value
@@ -57,7 +57,7 @@ class Rectangle(Base):
         """Getter for y"""
         return self.__y
 
-    @height.setter
+    @y.setter
     def y(self, value):
         """Setter for y"""
         self.__y = value
