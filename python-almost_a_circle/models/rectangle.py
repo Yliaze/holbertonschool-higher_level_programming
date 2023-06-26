@@ -94,5 +94,6 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """Return description of the rectangle"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y}\
-- {self.width}/{self.height}"
+ - {self.width}/{self.height}"
