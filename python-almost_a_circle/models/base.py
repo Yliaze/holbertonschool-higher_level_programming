@@ -72,12 +72,8 @@ class Base:
         if cls.__name__ == "Rectangle":
             """4 mandatory attributes"""
             dummy = cls(1, 1, 1, 1)
-        elif cls.__name__ == "Square":
-            """1 mandatory attribute"""
-            dummy = cls(1)
         else:
-            """0 mandatory attribute"""
-            dummy = cls()
+            dummy = cls(1)
 
         dummy.update(**dictionary)
         return dummy
