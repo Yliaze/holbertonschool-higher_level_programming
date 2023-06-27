@@ -50,3 +50,14 @@ class Base:
 
         with open((cls.__name__ + ".json"), "w", encoding='utf-8') as f:
             f.write(cls.to_json_string(list_data))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation json_string
+
+        Args:
+            json_string (str): A JSON str representation of a list of dicts
+        """
+        if json_string is None:
+            return []
+        return json.loads(json_string)
